@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-Page</title>
+</head>
+<body>
+    
+<style>
+    /* main page */
+    body{
+        background-image: linear-gradient(to top, rgba(153, 126, 250, 0.747), rgba(147, 147, 165, 0.747), rgb(252, 185, 185));
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+
+        animation: fadeInAnimation ease 1.5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+    @keyframes fadeInAnimation 
+        {
+            0% 
+            {
+                opacity: 0;
+            }
+            100% 
+            {
+                opacity: 1;
+            }
+        }
+        html
+        {
+            font-size: 18px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        align-items: center;
+    }
+    
+    *{
+        scroll-behavior: smooth;
+        text-decoration: none;
+        list-style: none;
+    }
+    
+    span{
+        color:rgb(235, 78, 78);
+    }
+    
+    /* Nav Bar */
+    .top-nav 
+    {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .top-nav a 
+    {
+        padding: 14px;
+        display: block;
+        text-decoration: none;
+        color: black;
+        padding-inline: 20px;
+        font-size: 21px;
+    }
+
+    .top-nav a:hover 
+    {
+        transition: 0.4s ease;
+        color:rgb(255, 255, 255);
+    }
+
+    .my-name a 
+    {
+        text-decoration: none;
+        color: black;
+        float: left;
+        display: flex;
+        padding: 14px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #242222;
+        font-size: 19px;
+        font-weight: bold;
+    }
+
+    .my-name a:hover 
+    {
+        transition: 0.4s ease;
+        color: white;
+    }
+    .section-1 
+    {
+        background-color:rgb(248, 139, 139);
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.8);
+        border-radius: 8px;
+    }
+
+    
+    
+    
+    
+    
+    /* Home Page Css */
+    #home
+    {
+        display: block;
+    }
+
+
+
+
+
+    /* Image CSS */
+
+    .image .my-image{
+        margin-top: 40px;
+        padding: 5px;
+        border: 4px solid rgb(250, 129, 129);
+        border-radius: 8px;
+    }
+    
+    .image .my-image:hover{
+        transform: scale(1.01);
+        transition: 0.4s ease;
+    }
+    
+    /* Home text */
+    
+    .home-text{
+
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 90px;
+
+    }
+    
+    .arrow_button img:hover{
+        transform: scale(1.12);
+        transition: 0.3s ease;
+    }
+    
+    /* About Section Css */
+    .about_description
+    {
+        text-align: center;
+        padding-bottom: 105px;
+        font-size: 25px;
+    }
+
+
+    .about_description .college-button
+    {
+        text-decoration: none;
+    }
+
+    .contact-id{
+        text-align: center;
+    }
+
+    .contact-info a{
+        color: black;
+    }
+
+    .contact-info ul{
+
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+    .contact-info li:hover{
+        filter: invert(90%);
+        transform: scale(1.05);
+        transition: 0.2s ease;
+    }
+    .contact-info h4{
+        margin: 32px;
+    }
+
+    .social-description{
+        font-size: 30px;
+    }
+
+
+
+    /* DARK MODE CSS */
+
+
+        input[type="checkbox"]
+        {
+            -webkit-appearance: none;
+            visibility: hidden;
+            display: none;
+        }
+        
+        .check
+        {
+            position: relative;
+            display: block;
+            width: 90px;
+            height: 40px;
+            background: #ff5f54;
+            cursor: pointer;
+            border-radius: 30px;
+            overflow: hidden;
+            transition: ease-in 0.3s;
+            margin-top: 30px;
+            margin-bottom: 2px;
+            margin-left: 40px;
+            box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.7);
+        }
+
+
+        input[type="checkbox"]:checked ~ .check
+        {
+            background: rgb(29, 29, 29);
+            box-shadow: 0px 0px 0px 2000px rgba(49, 49, 49, 0.678);
+            z-index: -1;
+        }
+
+        input[type="checkbox"]:checked ~ .check::before
+        {
+            transform: translateX(-50px);
+        }
+        
+        input[type="checkbox"]:checked ~ .check::after
+        {
+            transform: translateX(50px);
+        }
+        
+        .check::before
+        {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            background: rgb(29, 29, 29);
+            width: 30px;
+            height: 30px;
+            border-radius: 80%;
+            transition: 0.5s;
+        }
+
+        .check::after
+        {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            background: #ff5f54;;
+            width: 29px;
+            height: 29px;
+            border-radius: 80%;
+            transition: 0.5s;
+            transform: translateX(100px);
+            cursor: pointer;
+            box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.7);
+        }
+</style>
+
+
+    <!-- Nav bar -->
+    <section class="section-1">
+        <div class="whole-content">
+            <div class="my-name">
+                <a href="">Parth Khare | Portofolio</a>
+            </div>
+            <div class="top-nav">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- End Of NAV BAR -->
+    
+
+    <!-- DARK MODE BUTTON -->
+    
+    <label>
+        <input type="checkbox">
+        <span class="check"></span>
+    </label>
+    
+    <!-- END OF BUTTON -->
+    
+    <!-- HOME PAGE -->
+    
+    <section id="home">
+        <div class="home_page">
+            <div class="image">
+                <center><a href="https://github.com/parth-khare" title="Github || Parth Khare" target="_blank"><img class="my-image" src="images\Web-pageimage.jpg" alt="Parth Khare" style="max-width: 25%; max-height: 300px;"></a></center>
+            </div>
+            
+            <div class="home-text">
+                <h1>Hey, Im <span>Parth</span>. Welc<span>ome</span> to my website</h1>
+                <a href="#about" type = "button" class = "arrow_button"><img src="https://img.icons8.com/material-outlined/48/000000/sort-down.png"/></a>
+            </div>  
+        </div>
+    </section>
+
+    <!-- END OF HOME PAGE -->
+
+
+
+
+
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="about_description">
+            <h1 class="about-title">
+                Ab<span>ou</span>t Me
+            </h1>
+            <p>A 2nd year <b>Btech</b> Student from:</p>
+            <p>JUIT, Solan.
+            <br>
+            <br>
+            <u>Tech interests<u>
+            <br>
+            WebTech | Python | Java | Mern Stack</p>
+        </div>
+    </section>
+    <!-- About Section End -->
+
+    
+    
+    <!-- Contact Details -->
+    
+    <section id="contact">
+        <div class="contact-id">
+            <h1 class="social-description">
+                Contact <span>in</span>forma<span>tion</span>
+            </h1>
+            <p>You can connect to me via these social media handles</p>
+
+            <div class="contact-info">
+                <ul>
+                
+                <li><a href="mailto:201517@juitsolan.in" type="button" class="tag1" target = "_blank"><img src="https://img.icons8.com/ios-filled/48/000000/email-open.png" style="width: 30px; height: 30px;"/><h4>E-mail</h4></a></li>   
+            
+
+                <li><a href="https://github.com/parth-khare" type="button" class="tag2" target="_blank"><img src="https://img.icons8.com/material-sharp/30/000000/github.png"/><h4>Github</h4></a></li>
+
+           
+                <li><a href="https://twitter.com/Parth_1724" type="button" class="tag3" target="_blank"><img src="https://img.icons8.com/ios-glyphs/30/000000/twitter--v1.png"/><h4>Twitter</h4></a></li>
+
+           
+                <li><a href="https://www.linkedin.com/in/parth-khare-2747141bb/" type="button" class="tag4" target="_blank"><img src="https://img.icons8.com/ios-glyphs/30/000000/linkedin.png"/><h4>LinkedIn</h4></a></li>
+                
+            </ul>  
+            </div>
+        </div>
+    </section>
+    <!-- Contact Details End -->
+    
+</body>
+</html>
